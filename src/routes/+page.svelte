@@ -1,8 +1,10 @@
 <script>
   import ArrowIcon from "$lib/icons/ArrowIcon.svelte";
-  import Button from "../components/Button.svelte";
-  import { Splide, SplideSlide } from "@splidejs/svelte-splide";
-  import '@splidejs/splide/css';
+  import "@splidejs/splide/css";
+  import { ButtonVariant } from "../types/Button";
+  import Button from "$lib/components/Button.svelte";
+  import DiscountedProducts from "$lib/components/DiscountedProducts.svelte";
+  import FeaturedSection from "$lib/components/FeaturedSection.svelte";
 </script>
 
 <svelte:head>
@@ -10,7 +12,7 @@
   <meta name="description" content="FullStack Wiz E-Commerce Store" />
 </svelte:head>
 
-<div class="padding-x">
+<div class="padding-x bg-fw-grey">
   <h1
     class="flex flex-col text-[18vw] leading-none pt-6 text-fw-blue uppercase font-serif text-center items-center sm:text-start sm:items-start"
   >
@@ -33,6 +35,7 @@
             empower your digital journey.
           </span>
           <Button
+            variant={ButtonVariant.SECONDARY}
             dClass="w-full"
             text="Explore Laptops"
             suffixIcon={ArrowIcon}
@@ -46,26 +49,13 @@
       Discover our curated selection of cutting-edge laptops designed to empower
       your digital journey.
     </span>
-    <Button dClass="w-full" text="Explore Laptops" suffixIcon={ArrowIcon} />
+    <Button
+      variant={ButtonVariant.SECONDARY}
+      dClass="w-full"
+      text="Explore Laptops"
+      suffixIcon={ArrowIcon}
+    />
   </div>
-
-  <Splide
-    options={{
-      type: "loop",
-      gap: "20px",
-      perPage: 3,
-      perMove: 1,
-    }}
-  >
-    <SplideSlide>a</SplideSlide>
-    <SplideSlide>b</SplideSlide>
-    <SplideSlide>c</SplideSlide>
-    <SplideSlide>d</SplideSlide>
-    <SplideSlide>e</SplideSlide>
-
-    <div class="splide__arrows">
-      <button class="splide__arrow splide__arrow--prev">Prev</button>
-      <button class="splide__arrow splide__arrow--next">Next</button>
-    </div>
-  </Splide>
+  <DiscountedProducts />
+  <FeaturedSection />
 </div>
