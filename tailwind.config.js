@@ -23,6 +23,13 @@ export default {
       boxShadow: {
         sm: "0 1px 10px rgba(0, 0, 0, 0.10)",
       },
+      screens: {
+        xsm: "380px"
+      },
+      backgroundImage: {
+        'tech-rocket': "url('src/lib/images/tech-rocket.jpg')",
+        'game-rocket': "url('src/lib/images/game-rocket.jpg')",
+      }
     },
   },
   plugins: [],

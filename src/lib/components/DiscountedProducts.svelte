@@ -10,19 +10,23 @@
   hasTrack={false}
   options={{
     type: "loop",
-    padding: 20,
     gap: 30,
     perPage: 4,
     perMove: 1,
     breakpoints: {
       1200: {
+        padding: 20,
         perPage: 3,
       },
-      720: {
+      840: {
+        padding: 10,
         perPage: 2,
+        arrows: false,
       },
-      350: {
+      520: {
+        padding: 7,
         perPage: 1,
+        arrows: false,
       },
     },
   }}

@@ -8,9 +8,17 @@
 }
 
 .splide__arrow--prev {
-  left: -1rem;
+  left: -1rem !important;
 }
 
 .splide__arrow--next {
-  right: -1rem;
+  right: -1rem !important;
+}
+
+.splide__pagination {
+  bottom: -0.5rem !important;
+}
+
+.splide__pagination__page.is-active {
+  @apply !bg-fw-blue;
 }

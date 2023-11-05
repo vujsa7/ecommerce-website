@@ -2,11 +2,8 @@
   import { ButtonVariant } from "../../types/Button";
 
   export let variant: ButtonVariant;
-  export let text = "";
   export let dClass = "";
   export let onClick = () => {};
-  export let suffixIcon: ConstructorOfATypedSvelteComponent | undefined =
-    undefined;
 </script>
 
 <button
@@ -18,6 +15,5 @@
   }`}
   on:click={onClick}
 >
-  {text}
-  <svelte:component this={suffixIcon} />
+  <slot />
 </button>
