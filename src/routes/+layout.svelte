@@ -4,7 +4,7 @@
   import "./styles.css";
 </script>
 
-<div class="app font-body">
+<div class="app font-body text-fw-blue">
   <Header />
   <main>
     <slot />
