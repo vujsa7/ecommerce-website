@@ -1,9 +1,9 @@
 <script>
   import "@splidejs/splide/css";
+  import HeroSection from "../components/HeroSection.svelte";
+  import DiscountedProducts from "../components/DiscountedProducts.svelte";
+  import FeaturedSection from "../components/FeaturedSection.svelte";
 
-  import DiscountedProducts from "$lib/components/DiscountedProducts.svelte";
-  import FeaturedSection from "$lib/components/FeaturedSection.svelte";
-  import HeroSection from "$lib/components/HeroSection.svelte";
 </script>
 
 <svelte:head>

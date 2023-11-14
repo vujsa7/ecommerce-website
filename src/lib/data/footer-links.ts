@@ -1,4 +1,6 @@
-export const footerLinkSections = [
+import type { FooterSection } from "../../types/Footer";
+
+export const footerSections: FooterSection[] = [
   {
     title: "Products",
     links: [
