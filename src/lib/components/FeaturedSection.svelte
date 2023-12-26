@@ -1,5 +1,5 @@
 <script>
-  import { ButtonVariant } from "../types/Button";
+  import { ButtonVariant } from "../../types/Button";
   import Button from "./Button.svelte";
 </script>
 

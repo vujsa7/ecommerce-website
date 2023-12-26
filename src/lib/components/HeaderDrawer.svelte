@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from "svelte";
-  import type { HeaderLink } from "../types/Header";
+  import type { HeaderLink } from "../../types/Header";
   import ShoppingBagIcon from "$lib/icons/ShoppingBagIcon.svelte";
 
   export let isMenuOpened = false;
@@ -40,10 +40,13 @@
   >
     {#each headerLinks as link}
       <div class="px-5 w-full py-3">
-        <button class="cursor-pointer w-min gap-2 flex items-center">
+        <a
+          href={link.link}
+          class="cursor-pointer w-min gap-2 flex items-center"
+        >
           <svelte:component this={link.icon} />
           {link.name}
-        </button>
+        </a>
       </div>
     {/each}
   </div>

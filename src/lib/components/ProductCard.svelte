@@ -1,7 +1,7 @@
 <script lang="ts">
   import StarIcon from "$lib/icons/StarIcon.svelte";
-  import { ButtonVariant } from "../types/Button";
-  import type { Product } from "../types/Product";
+  import { ButtonVariant } from "../../types/Button";
+  import type { Product } from "../../types/Product";
   import Button from "./Button.svelte";
 
   export let product: Product;

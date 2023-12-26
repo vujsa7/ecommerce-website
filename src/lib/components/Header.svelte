@@ -4,13 +4,15 @@
   import MenuIcon from "$lib/icons/MenuIcon.svelte";
   import ProductIcon from "$lib/icons/ProductIcon.svelte";
   import ShoppingBagIcon from "$lib/icons/ShoppingBagIcon.svelte";
-  import type { HeaderLink } from "../types/Header";
+  import type { HeaderLink } from "../../types/Header";
   import HeaderDrawer from "./HeaderDrawer.svelte";
+  import ProductsPopover from "./ProductsPopover.svelte";
 
   const headerLinks: HeaderLink[] = [
     { name: "Home", link: "/home", icon: HomeIcon },
-    { name: "Products", link: "/products", icon: ProductIcon },
+    { name: "Products", icon: ProductIcon, popover: ProductsPopover },
   ];
+
   let isMenuOpened = false;
 
   function open() {
@@ -25,12 +27,21 @@
     <div class="flex gap-16 items-center">
       <Logo />
       {#each headerLinks as link}
-        <span class="cursor-pointer hidden md:block">{link.name}</span>
+        <a
+          id={link.name}
+          href={link.link}
+          class="cursor-pointer hidden md:block"
+        >
+          {link.name}
+        </a>
+        {#if link.popover}
+          <svelte:component this={link.popover}></svelte:component>
+        {/if}
       {/each}
     </div>
-    <button class="hidden md:block">
+    <a href="/shopping-bag" class="hidden md:block">
       <ShoppingBagIcon />
-    </button>
+    </a>
     <button on:click={open} class="block md:hidden z-10">
       <MenuIcon />
     </button>

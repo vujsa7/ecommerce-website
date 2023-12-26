@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ButtonVariant } from "../types/Button";
+  import { ButtonVariant } from "../../types/Button";
 
   export let variant: ButtonVariant;
   export let dClass = "";

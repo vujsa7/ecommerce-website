@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
+import plugin from "flowbite/plugin.js";
+
 export default {
-  content: ["./src/**/*.{html,js,svelte,ts}"],
+  content: [
+    "./src/**/*.{html,js,svelte,ts}",
+    "./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -14,7 +20,7 @@ export default {
           grey: "#F8F8F8",
           darkgrey: "#C1C1C1",
           gold: "#FFC804",
-          red: "#DD0202"
+          red: "#DD0202",
         },
       },
       fontSize: {
@@ -24,13 +30,13 @@ export default {
         sm: "0 1px 10px rgba(0, 0, 0, 0.10)",
       },
       screens: {
-        xsm: "380px"
+        xsm: "380px",
       },
       backgroundImage: {
-        'tech-rocket': "url('src/lib/images/tech-rocket.jpg')",
-        'game-rocket': "url('src/lib/images/game-rocket.jpg')",
-      }
+        "tech-rocket": "url('src/lib/images/tech-rocket.jpg')",
+        "game-rocket": "url('src/lib/images/game-rocket.jpg')",
+      },
     },
   },
-  plugins: [],
+  plugins: [plugin],
 };
